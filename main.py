@@ -12,8 +12,8 @@ url = "https://newsapi.org/v2/everything?" \
       "apiKey=a67c7e01d74649978bcbeb1de28af140&" \
       "language=en"
 
-request = requests.get(url)
-content = request.json()
+response = requests.get(url)
+content = response.json()
 message = ""
 for article in content["articles"][:20]:
     if article["title"] is not None:
